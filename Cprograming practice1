@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main(void)
+{
+	int a, b;
+	for (b = 9; b >= 1; b--)
+	{
+		for (a = 1; a<=9; a++)
+		{
+			if (a < b)
+				printf(" ");
+			else
+				printf("%d", a);
+		}
+		printf("\n");
+	}
+	return 0;
+}
