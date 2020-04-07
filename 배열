@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main(void)
+{
+    char arr[6]="space";
+    
+    printf("%s", arr);
+    printf("%c", arr[0]);
+    printf("%d", arr[0]);
+    printf("%d", arr[5]);
+    printf("%c", arr[5]);
+    
+    scanf_s("%c", &arr[0]);
+    printf("%s\n", arr);
+    return 0;
+
+}
