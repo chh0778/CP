@@ -1,0 +1,26 @@
+num=1
+den=poly([-1 -2 -10])
+G=tf(num, den)
+figure(1)
+rlocus(G)
+axis([-20 5 -15 15])
+z=0.174
+sgrid(z,0)
+[K,p]=rlocfind(G)
+T=feedback(K*G, 1)
+figure(2)
+step(T)
+hold on
+
+num2=[1 0.1]
+den2=poly([0 -1 -2 -10])
+G2=tf(num2, den2)
+figure(3)
+rlocus(G2)
+axis([-20 5 -15 15])
+z=0.174
+sgrid(z,0)
+[K,p]=rlocfind(G2)
+T2=feedback(K*G2, 1)
+figure(2)
+step(T2)
